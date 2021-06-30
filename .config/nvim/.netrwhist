@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/jacob/work/bioinformatic_pipeline/.git'
+let g:netrw_dirhist_5='/home/jacob/personal/learn/cmake/Complete'
+let g:netrw_dirhist_4='/home/jacob/personal/learn/go/ch1'
+let g:netrw_dirhist_3='/home/jacob/personal/learn/go/ch3/surface'
+let g:netrw_dirhist_2='/home/jacob/personal/JacobJanzen.github.io'
+let g:netrw_dirhist_1='/home/jacob/personal/projects/Battleship'

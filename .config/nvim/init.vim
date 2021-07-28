@@ -21,6 +21,7 @@ Plug 'snakemake/snakemake', {'rtp': 'misc/vim'}
 Plug 'rust-lang/rust.vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'snakemake/snakefmt'
+Plug 'lervag/vimtex'
 call plug#end()
 
 " For coc.nvim
@@ -43,7 +44,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
             \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-autocmd vimenter * ++nested colorscheme gruvbox
+colorscheme ncs_theme
 
 let g:rustfmt_autosave = 1
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`

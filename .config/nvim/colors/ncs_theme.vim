@@ -66,8 +66,8 @@ hi MoreMsg         ctermfg=3    ctermbg=none    cterm=none
 " - Visual aid -
 " --------------
 hi MatchParen      ctermfg=none    ctermbg=none    cterm=underline
-hi Visual          ctermfg=0    ctermbg=15    cterm=none
-hi VisualNOS       ctermfg=0    ctermbg=15    cterm=none
+hi Visual          ctermfg=0    ctermbg=3    cterm=none
+hi VisualNOS       ctermfg=0    ctermbg=3    cterm=none
 hi NonText         ctermfg=0    ctermbg=none    cterm=none
 
 hi Todo            ctermfg=3    ctermbg=none    cterm=none
@@ -102,7 +102,7 @@ hi Label           ctermfg=3    ctermbg=none    cterm=none
 hi Operator        ctermfg=6    ctermbg=none    cterm=none
 hi Keyword         ctermfg=3    ctermbg=none    cterm=none
 hi Exception       ctermfg=3    ctermbg=none    cterm=none
-hi Comment         ctermfg=7    ctermbg=none    cterm=none
+hi Comment         ctermfg=8    ctermbg=none    cterm=none
 
 hi Special         ctermfg=6    ctermbg=none    cterm=none
 hi SpecialChar     ctermfg=6    ctermbg=none    cterm=none

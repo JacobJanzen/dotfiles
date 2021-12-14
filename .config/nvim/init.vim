@@ -22,6 +22,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'snakemake/snakefmt'
 Plug 'lervag/vimtex'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " For coc.nvim

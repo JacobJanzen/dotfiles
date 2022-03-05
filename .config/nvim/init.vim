@@ -1,29 +1,36 @@
-set showmatch
-set mouse=v
-set hlsearch
-set tabstop=4
-set softtabstop=4
-set expandtab
-set shiftwidth=4
-set autoindent
-set number
-set wildmode=longest,list
-filetype plugin indent on
-syntax on
+" Plugins
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
-Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
-Plug 'rbgrouleff/bclose.vim'
-Plug 'francoiscabrol/ranger.vim'
-Plug 'morhetz/gruvbox'
-Plug 'snakemake/snakemake', {'rtp': 'misc/vim'}
-Plug 'rust-lang/rust.vim'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'snakemake/snakefmt'
-Plug 'lervag/vimtex'
-Plug 'vim-airline/vim-airline'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}     " For intellisense
+Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}    " Go Tools
+Plug 'rust-lang/rust.vim'                           " Rust Tools
+Plug 'neovimhaskell/haskell-vim'                    " Haskell Tools
+Plug 'lervag/vimtex'                                " LaTeX Tools
+Plug 'vim-airline/vim-airline'                      " Status Bar
+Plug 'Raimondi/delimitMate'                         " Close Brackets
 call plug#end()
+
+" Basic Settings
+set mouse=v                 " allow mouse usage
+set tabstop=4               " set tab size to 4
+set expandtab               " always use spaces in place of tabs
+set shiftwidth=4
+set autoindent              " automatically indent
+set number                  " show line numbers
+set wildmode=longest,list   " When more than one match, list all matches and complete till longest common match
+filetype plugin indent on   " Detect filetype, allow plugins, and load indent file
+syntax on                   " Use syntax highlighting
+colorscheme ncs_theme       " Set colour scheme
+
+" Plugin Settings
+let g:rustfmt_autosave = 1  " format rust on save
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+let g:haskell_classic_highlighting = 1
 
 " For coc.nvim
 set hidden
@@ -44,17 +51,3 @@ endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
             \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-colorscheme ncs_theme
-
-let g:rustfmt_autosave = 1
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
-let g:haskell_classic_highlighting = 1
-au BufNewFile,BufRead Snakefile *.smk set filetype=snakemake
-au FileType snakemake autocmd BufWritePre <buffer> execute ':Snakefmt'

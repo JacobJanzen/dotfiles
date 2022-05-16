@@ -44,7 +44,6 @@ export PATH=~/miniconda3/bin:$PATH
 export GEM_HOME=~/.ruby/
 export PATH="$PATH:~/.ruby/bin"
 weather(){ curl wttr.in; }
-#[ -f "/home/jacob/.ghcup/env" ] && source "/home/jacob/.ghcup/env" # ghcup-env
 
 # aliases
 alias ll='ls -alF'
@@ -55,27 +54,12 @@ alias vi="nvim"
 alias sl="\ls"
 alias python="python3"
 alias ls="exa"
-alias icat="kitty +kitten icat"
 
 eval "$(starship init zsh)"
-source /usr/share/nvm/init-nvm.sh
 export TEXMFCNF='~/.tex_config_dir:'
 
 [[ -s "/home/jacobj/.gvm/scripts/gvm" ]] && source "/home/jacobj/.gvm/scripts/gvm"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jacobj/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/jacobj/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/jacobj/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/jacobj/mambaforge/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 [ -f "/home/jacobj/.ghcup/env" ] && source "/home/jacobj/.ghcup/env" # ghcup-env
+
+[[ -s "/home/jjanzen/.gvm/scripts/gvm" ]] && source "/home/jjanzen/.gvm/scripts/gvm"

@@ -7,6 +7,7 @@ Plug 'neovimhaskell/haskell-vim'                    " Haskell Tools
 Plug 'lervag/vimtex'                                " LaTeX Tools
 Plug 'vim-airline/vim-airline'                      " Status Bar
 Plug 'Raimondi/delimitMate'                         " Close Brackets
+Plug 'rhysd/vim-clang-format'                       " format C code
 call plug#end()
 
 " Basic Settings
@@ -23,6 +24,7 @@ colorscheme ncs_theme       " Set colour scheme
 
 " Plugin Settings
 let g:rustfmt_autosave = 1  " format rust on save
+autocmd FileType c ClangFormatAutoEnable " format C on save
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
 let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
 let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`

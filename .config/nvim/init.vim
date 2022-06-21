@@ -8,6 +8,7 @@ Plug 'lervag/vimtex'                                " LaTeX Tools
 Plug 'vim-airline/vim-airline'                      " Status Bar
 Plug 'Raimondi/delimitMate'                         " Close Brackets
 Plug 'rhysd/vim-clang-format'                       " format C code
+Plug 'NLKNguyen/papercolor-theme'                   " colorscheme
 call plug#end()
 
 " Basic Settings
@@ -20,11 +21,14 @@ set number                  " show line numbers
 set wildmode=longest,list   " When more than one match, list all matches and complete till longest common match
 filetype plugin indent on   " Detect filetype, allow plugins, and load indent file
 syntax on                   " Use syntax highlighting
-colorscheme ncs_theme       " Set colour scheme
+set t_Co=256                " Enable 256 colours
+set background=dark         " Dark mode
+colorscheme PaperColor
 
 " Plugin Settings
 let g:rustfmt_autosave = 1  " format rust on save
 autocmd FileType c ClangFormatAutoEnable " format C on save
+autocmd FileType cpp ClangFormatAutoEnable " format on C++ save
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
 let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
 let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`

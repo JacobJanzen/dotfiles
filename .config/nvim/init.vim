@@ -9,6 +9,8 @@ Plug 'vim-airline/vim-airline'                      " Status Bar
 Plug 'Raimondi/delimitMate'                         " Close Brackets
 Plug 'rhysd/vim-clang-format'                       " format C code
 Plug 'NLKNguyen/papercolor-theme'                   " colorscheme
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Basic Settings

@@ -1,0 +1,39 @@
+! set up locale for UTF-8
+*.vt100.locale: false
+*.vt100.utf8: true
+
+! Standardize behaviour
+*.vt100.metaSendsEscape: true
+*.vt100.backarrowKey: false
+*.ttyModes: erase ^?
+
+! Remove Scrollbar
+*.vt100.scrollBar: false
+
+! Copy/Paste
+*.vt100.selectToClipboard: true
+
+! Fonts
+*.vt100.faceName: SauceCodePro Nerd Font Mono:regular:size=11:antialias=true:autohint=true
+
+! Colours
+*.foreground: #F5F5F5
+*.background: #252525
+
+*.color0: #252525
+*.color1: #FF443E
+*.color2: #C3D82C
+*.color3: #FFC135
+*.color4: #42A5F5
+*.color5: #D81B60
+*.color6: #00ACC1
+*.color7: #F5F5F5
+
+*.color8: #222728
+*.color9: #F8A35E
+*.color10: #00DBD3
+*.color11: #B4AB41
+*.color12: #3B3CF4
+*.color13: #590CD4
+*.color14: #18C0F8
+*.color15: #A9AFA8

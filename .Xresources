@@ -12,28 +12,63 @@
 
 ! Copy/Paste
 *.vt100.selectToClipboard: true
+xterm*disallowedWindowOps: 20,21,SetXProp
 
 ! Fonts
 *.vt100.faceName: SauceCodePro Nerd Font Mono:regular:size=11:antialias=true:autohint=true
 
 ! Colours
-*.foreground: #F5F5F5
-*.background: #252525
+*background: #24273A
+*foreground: #CAD3F5
 
-*.color0: #252525
-*.color1: #FF443E
-*.color2: #C3D82C
-*.color3: #FFC135
-*.color4: #42A5F5
-*.color5: #D81B60
-*.color6: #00ACC1
-*.color7: #F5F5F5
+! black
+*color0: #494D64
+*color8: #5B6078
 
-*.color8: #222728
-*.color9: #F8A35E
-*.color10: #00DBD3
-*.color11: #B4AB41
-*.color12: #3B3CF4
-*.color13: #590CD4
-*.color14: #18C0F8
-*.color15: #A9AFA8
+! red
+*color1: #ED8796
+*color9: #ED8796
+
+! green
+*color2: #A6DA95
+*color10: #A6DA95
+
+! yellow
+*color3: #EED49F
+*color11: #EED49F
+
+! blue
+*color4: #8AADF4
+*color12: #8AADF4
+
+! magenta
+*color5: #F5BDE6
+*color13: #F5BDE6
+
+! cyan
+*color6: #8BD5CA
+*color14: #8BD5CA
+
+! white
+*color7: #B8C0E0
+*color15: #A5ADCB
+! *.foreground: #F5F5F5
+! *.background: #252525
+! 
+! *.color0: #252525
+! *.color1: #FF443E
+! *.color2: #C3D82C
+! *.color3: #FFC135
+! *.color4: #42A5F5
+! *.color5: #D81B60
+! *.color6: #00ACC1
+! *.color7: #F5F5F5
+! 
+! *.color8: #222728
+! *.color9: #F8A35E
+! *.color10: #00DBD3
+! *.color11: #B4AB41
+! *.color12: #3B3CF4
+! *.color13: #590CD4
+! *.color14: #18C0F8
+! *.color15: #A9AFA8

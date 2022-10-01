@@ -5,13 +5,17 @@ Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}    " Go Tools
 Plug 'rust-lang/rust.vim'                           " Rust Tools
 Plug 'neovimhaskell/haskell-vim'                    " Haskell Tools
 Plug 'lervag/vimtex'                                " LaTeX Tools
-Plug 'vim-airline/vim-airline'                      " Status Bar
 Plug 'Raimondi/delimitMate'                         " Close Brackets
 Plug 'rhysd/vim-clang-format'                       " format C code
 Plug 'NLKNguyen/papercolor-theme'                   " colorscheme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'itchyny/lightline.vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 call plug#end()
 
 " Basic Settings
@@ -26,7 +30,16 @@ filetype plugin indent on   " Detect filetype, allow plugins, and load indent fi
 syntax on                   " Use syntax highlighting
 set t_Co=256                " Enable 256 colours
 set background=dark         " Dark mode
-colorscheme PaperColor
+let g:catppuccin_flavour = "macchiato"
+let g:lightline = {'colorscheme': 'catppuccin'}
+lua << EOF
+require("catppuccin").setup({
+            \ integrations = {
+        \ coc_nvim = true,
+      \ }
+  \ })
+EOF
+colorscheme catppuccin
 
 " Plugin Settings
 let g:rustfmt_autosave = 1                  " format rust on save
@@ -41,6 +54,8 @@ let g:haskell_enable_static_pointers = 1    " to enable highlighting of `static`
 let g:haskell_backpack = 1                  " to enable highlighting of backpack keywords
 let g:haskell_classic_highlighting = 1
 let g:table_mode_corner='|'
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 " For coc.nvim
 " <cr> confirms completion

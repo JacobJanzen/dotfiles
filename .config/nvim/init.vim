@@ -8,6 +8,7 @@ Plug 'lervag/vimtex'                                " LaTeX Tools
 Plug 'Raimondi/delimitMate'                         " Close Brackets
 Plug 'rhysd/vim-clang-format'                       " format C code
 Plug 'NLKNguyen/papercolor-theme'                   " colorscheme
+Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dhruvasagar/vim-table-mode'
@@ -29,17 +30,10 @@ set wildmode=longest,list   " When more than one match, list all matches and com
 filetype plugin indent on   " Detect filetype, allow plugins, and load indent file
 syntax on                   " Use syntax highlighting
 set t_Co=256                " Enable 256 colours
-set background=dark         " Dark mode
-let g:catppuccin_flavour = "macchiato"
-let g:lightline = {'colorscheme': 'catppuccin'}
-lua << EOF
-require("catppuccin").setup({
-            \ integrations = {
-        \ coc_nvim = true,
-      \ }
-  \ })
-EOF
-colorscheme catppuccin
+set background=dark
+let g:clang_format#code_style = "llvm"
+colorscheme solarized
+let g:lightline = {'colorscheme': 'solarized'}
 
 " Plugin Settings
 let g:rustfmt_autosave = 1                  " format rust on save

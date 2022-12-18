@@ -8,6 +8,7 @@ export TEXMFCNF="$HOME/.tex_config_dir:"
 # load scripts
 [ -s "$HOME/.cargo/env" ] && source "$HOME/.cargo/env" # load cargo
 [ -s "$HOME/.gvm/scripts/gvm" ] && source "$HOME/.gvm/scripts/gvm" # load gvm
+[ -f "/home/jjanzen/.ghcup/env" ] && source "/home/jjanzen/.ghcup/env" # ghcup-env
 
 # set aliases
 alias ll='ls -alF'
@@ -21,3 +22,4 @@ if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTI
 then
 	exec fish
 fi
+

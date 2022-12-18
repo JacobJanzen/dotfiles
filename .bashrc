@@ -1,8 +1,8 @@
 # .bashrc
 
 # set vars
-export PATH="$HOME/.local/bin:$PATH"
-export NVM_DIR="$HOME/.nvm" 
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
 export TEXMFCNF="$HOME/.tex_config_dir:"
 
 # load scripts

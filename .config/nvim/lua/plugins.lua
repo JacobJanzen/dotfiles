@@ -13,6 +13,10 @@ return require('packer').startup(function(use)
     use 'dhruvasagar/vim-table-mode' -- handle tables
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
+    -- fuzzy search
+    use 'junegunn/fzf'
+    use 'junegunn/fzf.vim'
+
     -- autocomplete
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'

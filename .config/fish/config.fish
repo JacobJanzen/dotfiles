@@ -6,6 +6,7 @@ alias vim 'nvim'
 alias vi 'nvim'
 alias sl 'ls'
 alias ls 'exa'
+alias umvpn 'sudo openconnect --protocol=nc --printcookie vpn.cc.umanitoba.ca/student --user=janzenj2@myumanitoba.ca'
 
 set PATH "$HOME/.local/bin:$PATH"
 set NVM_DIR "$HOME/.nvm"

@@ -1,9 +1,12 @@
 # .bashrc
 
 # set vars
-export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
+export PATH="/usr/local/cuda/bin:$HOME/bin:$HOME/gems/bin:$HOME/.local/bin:$HOME/go/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 export TEXMFCNF="$HOME/.tex_config_dir:"
+export GEM_HOME="$HOME/gems"
+export NPM_CONFIG_PREFIX="$HOME/.npm-global"
+export CC=/usr/bin/clang
 
 # load scripts
 [ -s "$HOME/.cargo/env" ] && source "$HOME/.cargo/env" # load cargo

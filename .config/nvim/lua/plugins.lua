@@ -12,6 +12,10 @@ return require('packer').startup(function(use)
     use 'rhysd/git-messenger.vim' -- show git commit messages
     use 'dhruvasagar/vim-table-mode' -- handle tables
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
 
     -- fuzzy search
     use 'junegunn/fzf'
@@ -27,7 +31,7 @@ return require('packer').startup(function(use)
     -- Go
     use {
         'fatih/vim-go',
-        config = ':GoUpdateBinaries',
+        run = ':GoUpdateBinaries',
     }
     -- Rust
     use 'rust-lang/rust.vim'

@@ -5,7 +5,7 @@ vim.opt.number = true
 vim.opt.background = 'dark'
 vim.cmd([[
     syntax on
-    colorscheme solarized
+    colorscheme slate
 ]])
 vim.g.lightline = { colorscheme = 'solarized' }
 

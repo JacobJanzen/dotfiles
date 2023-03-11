@@ -2,6 +2,7 @@
 vim.cmd([[
     let g:clang_format#code_style = 'llvm'
     autocmd FileType c ClangFormatAutoEnable
+    autocmd FileType cuda ClangFormatAutoEnable
     autocmd FileType cpp ClangFormatAutoEnable
 ]])
 

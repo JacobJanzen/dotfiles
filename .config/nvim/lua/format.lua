@@ -1,9 +1,13 @@
--- Format C/C++
+-- Clang Format
 vim.cmd([[
-    let g:clang_format#code_style = 'llvm'
+    let g:clang_format#code_style = 'file'
     autocmd FileType c ClangFormatAutoEnable
     autocmd FileType cuda ClangFormatAutoEnable
     autocmd FileType cpp ClangFormatAutoEnable
+    autocmd FileType cs ClangFormatAutoEnable
+    autocmd FileType java ClangFormatAutoEnable
+    autocmd FileType javascript ClangFormatAutoEnable
+    autocmd FileType json ClangFormatAutoEnable
 ]])
 
 -- Format Rust

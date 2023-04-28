@@ -27,6 +27,9 @@ return require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
     use 'L3MON4D3/LuaSnip'
 
+    -- tmux
+    use 'christoomey/vim-tmux-navigator'
+
     -- Language Specific Extensions
     -- Go
     use {

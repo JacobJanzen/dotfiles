@@ -11,6 +11,7 @@ alias umvpn 'sudo openconnect --protocol=nc --printcookie vpn.cc.umanitoba.ca/st
 set PATH "$HOME/.local/bin:$PATH"
 set NVM_DIR "$HOME/.nvm"
 set TEXMFCNF "$HOME/.tex_config_dir:"
+source ~/.iterm2_shell_integration.fish
 
 if status is-interactive
     if not set -q TMUX

@@ -8,6 +8,7 @@ vim.cmd([[
     autocmd FileType java ClangFormatAutoEnable
     autocmd FileType javascript ClangFormatAutoEnable
     autocmd FileType json ClangFormatAutoEnable
+    let g:vimtex_view_method = 'skim'
 ]])
 
 -- Format Rust

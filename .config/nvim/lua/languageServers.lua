@@ -80,3 +80,4 @@ require('lspconfig')['texlab'].setup{
     flags = lsp_flags
 }
 require('lspconfig')['perlpls'].setup{}
+require('lspconfig')['ccls'].setup{}

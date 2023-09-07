@@ -5,9 +5,8 @@ vim.opt.number = true
 vim.opt.background = 'dark'
 vim.cmd([[
     syntax on
-    colorscheme slate
 ]])
-vim.g.lightline = { colorscheme = 'solarized' }
+-- vim.g.lightline = { colorscheme = 'space-vim-dark' }
 
 -- syntax highlighting for haskell
 require('haskell')

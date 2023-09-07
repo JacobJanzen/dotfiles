@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
 
     -- Appearance
     use 'itchyny/lightline.vim' -- powerline
+    use 'liuchengxu/space-vim-dark' -- space vim
     use 'altercation/vim-colors-solarized' -- solarized colour scheme
 
     -- Dev Tools
@@ -44,4 +45,6 @@ return require('packer').startup(function(use)
     use 'lervag/vimtex'
     -- C/C++
     use 'rhysd/vim-clang-format'
+    -- CSV
+    use 'chrisbra/csv.vim'
 end)

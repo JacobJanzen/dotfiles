@@ -1,0 +1,1 @@
+/Users/jjanzen/dotfiles/.config/fish/config.fish

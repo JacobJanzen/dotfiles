@@ -1,50 +1,44 @@
-return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-    -- Appearance
-    use 'itchyny/lightline.vim' -- powerline
-    use 'liuchengxu/space-vim-dark' -- space vim
-    use 'altercation/vim-colors-solarized' -- solarized colour scheme
-
-    -- Dev Tools
-    use 'Raimondi/delimitMate' -- Manage delimiters
-    use 'tpope/vim-fugitive' -- Git commands
-    use 'bronson/vim-trailing-whitespace' -- Highlight trailing whitespace
-    use 'rhysd/git-messenger.vim' -- show git commit messages
-    use 'dhruvasagar/vim-table-mode' -- handle tables
-    use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
-    use {
+require('lazy').setup({
+    'itchyny/lightline.vim',
+    'liuchengxu/space-vim-dark',
+    'altercation/vim-colors-solarized',
+    'Raimondi/delimitMate',
+    'tpope/vim-fugitive',
+    'bronson/vim-trailing-whitespace',
+    'rhysd/git-messenger.vim',
+    'dhruvasagar/vim-table-mode',
+    'neovim/nvim-lspconfig',
+    {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
-
-    -- fuzzy search
-    use 'junegunn/fzf'
-    use 'junegunn/fzf.vim'
-
-    -- autocomplete
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'L3MON4D3/LuaSnip'
-
-    -- tmux
-    use 'christoomey/vim-tmux-navigator'
-
-    -- Language Specific Extensions
-    -- Go
-    use {
+        cmd = 'TSUpdate'
+    },
+    'junegunn/fzf',
+    'junegunn/fzf.vim',
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
+    'saadparwaiz1/cmp_luasnip',
+    'L3MON4D3/LuaSnip',
+    'christoomey/vim-tmux-navigator',
+    {
         'fatih/vim-go',
-        run = ':GoUpdateBinaries',
-    }
-    -- Rust
-    use 'rust-lang/rust.vim'
-    -- Haskell
-    use 'neovimhaskell/haskell-vim'
-    -- LaTeX
-    use 'lervag/vimtex'
-    -- C/C++
-    use 'rhysd/vim-clang-format'
-    -- CSV
-    use 'chrisbra/csv.vim'
-end)
+        cmd = 'GoUpdateBinaries',
+    },
+    'rust-lang/rust.vim',
+    'neovimhaskell/haskell-vim',
+    'lervag/vimtex',
+    'rhysd/vim-clang-format',
+    'chrisbra/csv.vim',
+})

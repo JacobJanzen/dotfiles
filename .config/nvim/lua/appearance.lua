@@ -6,7 +6,7 @@ vim.opt.background = 'dark'
 vim.cmd([[
     syntax on
 ]])
--- vim.g.lightline = { colorscheme = 'space-vim-dark' }
+-- vim.g.lightline = { colorscheme = 'space-vim-light' }
 
 -- syntax highlighting for haskell
 require('haskell')

@@ -41,4 +41,5 @@ require('lazy').setup({
     'lervag/vimtex',
     'rhysd/vim-clang-format',
     'chrisbra/csv.vim',
+    'NLKNguyen/papercolor-theme',
 })

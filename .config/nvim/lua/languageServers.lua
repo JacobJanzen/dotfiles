@@ -81,3 +81,5 @@ require('lspconfig')['texlab'].setup{
 }
 require('lspconfig')['perlpls'].setup{}
 require('lspconfig')['ccls'].setup{}
+require('lspconfig')['puppet'].setup{}
+require('lspconfig')['solargraph'].setup{}

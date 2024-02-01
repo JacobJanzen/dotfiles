@@ -5,16 +5,29 @@ alias l 'ls -F'
 alias vim 'nvim'
 alias vi 'nvim'
 alias sl 'ls'
-alias ls 'eza'
-alias umvpn 'sudo openconnect --protocol=nc --printcookie vpn.cc.umanitoba.ca/student --user=janzenj2@myumanitoba.ca'
-alias aplay 'mpv --quiet --demuxer=rawaudio --demuxer-rawaudio-format=u8 --demuxer-rawaudio-channels=1 --demuxer-rawaudio-rate=8000 -'
-set PATH "/Applications/Emacs.app/Contents/MacOS:/opt/homebrew/opt/grep/libexec/gnubin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$HOME/.local/bin:$HOME/.npm-global/bin:/opt/homebrew/opt/java/bin:/opt/homebrew/opt/sqlite/bin:$PATH"
-set NVM_DIR "$HOME/.nvm"
-set TEXMFCNF "$HOME/.tex_config_dir:"
-source ~/.iterm2_shell_integration.fish
+set PATH "$HOME/go/bin:$HOME/.local/bin:$HOME/puppet-editor-services:$PATH"
+set EDITOR "nvim"
+set NPM_PACKAGES "$HOME/.npm-packages"
+set PATH $PATH $NPM_PACKAGES/bin
+set MANPATH $NPM_PACKAGES/share/man $MANPATH
+set MODULE_DIR_PATH "$HOME/work/puppet-code/development/modules"
+status --is-interactive; and ~/.rbenv/bin/rbenv init - fish | source
+nvm use > /dev/null
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/CSCScience.ca/jjanzen/mambaforge/bin/conda
+    eval /home/CSCScience.ca/jjanzen/mambaforge/bin/conda "shell.fish" "hook" $argv | source
+end
+
+if test -f "/home/CSCScience.ca/jjanzen/mambaforge/etc/fish/conf.d/mamba.fish"
+    source "/home/CSCScience.ca/jjanzen/mambaforge/etc/fish/conf.d/mamba.fish"
+end
+# <<< conda initialize <<<
 
 if status is-interactive
-    if not set -q TMUX
-        exec tmux -2
-    end
+	if not set -q TMUX
+		exec tmux -2
+	end
 end
+

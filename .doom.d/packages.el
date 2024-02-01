@@ -8,3 +8,5 @@
 (package! org-roam-ui)
 (package! emacsql-sqlite-builtin)
 (package! citar-org-roam)
+(package! biblio)
+(package! org-bullets)

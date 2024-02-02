@@ -75,3 +75,12 @@
 (after! lsp-mode
   ;; https://github.com/emacs-lsp/lsp-mode/issues/3577#issuecomment-1709232622
   (delete 'lsp-terraform lsp-client-packages))
+
+(after! circe
+  (set-irc-server! "irc.libera.chat"
+    `(:tls t
+      :port 6697
+      :nick "jjanzen"
+      :sasl-username ,(+pass-get-user "irc/libera.chat")
+      :sasl-password (lambda (&rest _) (+pass-get-secret "irc/libera.chat"))
+      :channels ("#emacs" "#linux"))))

@@ -10,3 +10,4 @@
 (package! citar-org-roam)
 (package! biblio)
 (package! org-bullets)
+(package! visual-fill-column)

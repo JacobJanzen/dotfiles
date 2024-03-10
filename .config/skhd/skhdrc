@@ -1,0 +1,30 @@
+# focus window
+ctrl - h : yabai -m window --focus west || yabai -m display --focus west
+ctrl - j : yabai -m window --focus south || yabai -m display --focus south
+ctrl - k : yabai -m window --focus north || yabai -m display --focus north
+ctrl - l : yabai -m window --focus east || yabai -m display --focus east
+
+# move managed window
+shift + ctrl - h : yabai -m window --warp west
+shift + ctrl - j : yabai -m window --warp south
+shift + ctrl - k : yabai -m window --warp north
+shift + ctrl - l : yabai -m window --warp east
+
+# balance size of windows
+ctrl + shift - 0 : yabai -m space --balance
+
+# focus spaces
+ctrl + shift - n : yabai -m space --focus next || yabai -m space --focus first
+ctrl + shift - p : yabai -m space --focus prev || yabai -m space --focus last
+
+# switch to applications
+alt - 1 : open /Applications/LibreWolf.app
+alt - 2 : open /Applications/iTerm.app
+alt - 3 : open /Applications/Emacs.app
+alt - 4 : open /Applications/Discord.app
+
+# open new terminal
+cmd - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
+
+# LinkedIn Shortcut (for the meme)
+ctrl + alt + shift + cmd - l : open https://linkedin.com
